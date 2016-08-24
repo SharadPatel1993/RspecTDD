@@ -10,3 +10,18 @@ describe "Person class - entry in phonebook" do
 		expect(person.fullname).to eq "Joe Bloggs"
 	end
 end
+
+describe "Person class - add email for someone" do
+	it "should store and return email" do
+		person = Person.new("joe", "bloggs", "1 Jan 1996")
+
+		#Expected Outcomes
+		expect(person.emails).to eq []
+
+		person.add_email "joe@foo.com"
+		person.add_email "joe.bloggs@work.com"
+
+		#Expected Outcomes
+		expect(person.emails).to eq ["joe@foo.com", "joe.bloggs@work.com"]
+	end
+end
