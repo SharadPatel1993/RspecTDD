@@ -19,6 +19,10 @@ class Person
 		@emails << email
 	end
 
+	def remove_email(index)
+		@emails.delete_at(index)
+	end
+
 	def add_phone (phone)
 		@phone_numbers << phone
 	end
