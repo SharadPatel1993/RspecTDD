@@ -27,4 +27,8 @@ class Person
 		@phone_numbers << phone
 	end
 
+	def remove_phone (index)
+		@phone_numbers.delete_at(index)
+	end
+
 end

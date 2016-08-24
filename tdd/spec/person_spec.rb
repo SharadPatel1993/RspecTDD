@@ -52,3 +52,15 @@ describe "Person class - remove email for someone" do
 		expect(person.emails).to eq ["joe.bloggs@work.com"]
 	end
 end
+
+describe "Person class - remove phone number for someone" do
+	it "should remove that phone number from that entry" do
+		person = Person.new("joe", "bloggs", "1 Jan 1996")
+		person.add_phone "07712345678"
+		person.add_phone "02012345678"
+		person.remove_phone(0)
+
+		#Expected Result
+		expect(person.phone_numbers).to eq ["02012345678"]
+	end
+end
