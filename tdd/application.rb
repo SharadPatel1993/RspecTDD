@@ -36,3 +36,20 @@ class Person
 	end
 
 end
+
+class FamilyMember < Person
+
+	#Initializer
+
+	def initialize (f_name = "", s_name = "", date = nil, relationship)
+		super(f_name, s_name, date)
+		@relationship = relationship
+	end
+
+	#Getter
+
+	def relationship
+		@relationship
+	end
+
+end

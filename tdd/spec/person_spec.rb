@@ -77,5 +77,17 @@ describe "Person class - describe person" do
 	end
 end
 
+describe "FamilyMember class - inherits from Person and has relationship instance variable" do
+	it "should inherit from Person class and initialize a relationship variable" do
+		person = FamilyMember.new("joe", "bloggs", "1 Jan 1996", "father")
+
+		#Expected Result
+		expect(person.class).to eq FamilyMember
+		expect(person.relationship).to eq "father"
+	end
+end
+
+
+
 
 
