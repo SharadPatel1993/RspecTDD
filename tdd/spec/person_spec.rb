@@ -64,3 +64,18 @@ describe "Person class - remove phone number for someone" do
 		expect(person.phone_numbers).to eq ["02012345678"]
 	end
 end
+
+describe "Person class - describe person" do
+	it "should show a message with fullname, dob, email address and phone number for the entry" do
+		person = Person.new("joe", "bloggs", "1 Jan 1996")
+		person.add_email "joe.bloggs@work.com"
+		person.add_phone "07712345678"
+		person.add_phone "02012345678"
+
+		#Expected Result
+		expect(person.message).to eq "Joe Bloggs was born on 1996-01-01. Their email address(es) are: [\"joe.bloggs@work.com\"]. Their phone number(s) are [\"07712345678\", \"02012345678\"]"
+	end
+end
+
+
+

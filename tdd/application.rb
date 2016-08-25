@@ -31,4 +31,8 @@ class Person
 		@phone_numbers.delete_at(index)
 	end
 
+	def message
+		"#{@fullname} was born on #{@dob}. Their email address(es) are: #{@emails}. Their phone number(s) are #{@phone_numbers}"
+	end
+
 end
