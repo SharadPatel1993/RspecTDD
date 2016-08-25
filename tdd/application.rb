@@ -1,5 +1,7 @@
 require 'date'
 
+#----------------------------------------#
+
 class Person
 
 	#Initializer
@@ -50,6 +52,29 @@ class FamilyMember < Person
 
 	def relationship
 		@relationship
+	end
+
+end
+
+#----------------------------------------#
+
+class AddressBook
+
+	#Initializer
+	def initialize
+		@list = []
+	end
+
+	#Setters
+
+	def add (person)
+		person.is_a?(FamilyMember) || person.is_a?(Person) ? @list << person.fullname : "Not a Person or FamilyMember object!"
+	end
+
+	#Getters
+
+	def list
+		@list
 	end
 
 end

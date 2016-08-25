@@ -87,6 +87,21 @@ describe "FamilyMember class - inherits from Person and has relationship instanc
 	end
 end
 
+describe "AddressBook class - entry in AddressBook" do
+	it "should store entries into an AddressBook list" do
+		person1 = Person.new("joe", "blogs", "1 Jan 1990")
+		person2 = Person.new("andy", "nother", "2 Jan 1995")
+		book = AddressBook.new
+		book.add person1
+		book.add person2
+
+		#Expected Result
+		expect(book.list).to eq ["Joe Blogs", "Andy Nother"]
+	end
+end
+
+
+
 
 
 
